@@ -1,0 +1,64 @@
+Eureka
+
+
+Eureka server 
+
+
+propert use to setup pear to pear communication in eureka : eureka.client.serviceUrl.defaultZone property. 
+
+Eureka server can act in two ways :
+1> Standalone 
+2> cluter
+
+
+in above mention two mode standalone is when you are running service in localhost and only one eureka is there but cluter is mainly for prod where you run in multiple eureka server and they remain in sync 
+so that there is no conflict with each other.
+
+There are few property for eureka server let see;
+ 
+
+
+spring.application.name  -->     		Unique name for Eureka server service
+
+server.port  --> 				In which port server will be bound.
+
+eureka.client.register-with-eureka -->		This determines is this server register itself as client as I said earlier Eureka server is also act as client so that it  can sync the registry.The value false means 							prevent itself act as a client.
+
+eureka.client.fetch-registry   -->		Not register itself in service registry, when eureka act as client for cluster
+
+eureka.client.serviceUrl.defaultZone  -->   	It consult with other Eureka server for sync the service registry as it is standalone mode I give the local server address.
+
+
+
+Eureka Client:
+
+
+How Eureka client work :
+
+When client came in picture it try to register with eureka server in same zone and then if it fails to register then it goes to failover zone.
+Once it connectedt send all metadata to server and register itself with service name mention in property name.
+Once everything is done eureka client send heart beat in every 30 second and for 90 sec if server not get heart beat then ti unregister the servce.
+
+This is where client regiter it self from eureka but how they communicate through eureka ( eureka act as roter ) ?
+
+NO, what happen client take all info from euerka (fetch registery) then it communicate. This info get updated in evaery 30 sec and bring only delta from last 30 sec. due to this there is some time a lac came in picture.
+
+Then when any client goes down it send a cancle signal and eureka unregister it. 
+
+Now you have service registery now what you get get form all service details in your system .
+you can get all type of metadata like port, ip now make url and call as before using rest template.
+
+CODE::
+
+	private String createUrl(String serviceName, String childUrl) {
+		Application app = eurekaClient.getApplication(serviceName);
+		InstanceInfo inst = app.getInstances().get(0);
+		 String url = "http://"+inst.getIPAddr()+":"+inst.getPort()+"/"+childUrl;
+		 System.out.println("URL : " + url);
+		 return url;
+	}
+
+Here I make a function which take a serviceName and child url and return you full url.
+
+Done for eureka now.
+ 

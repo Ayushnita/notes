@@ -1,0 +1,9 @@
+ZUUL GATEWAY::
+
+Gateway is for filtering out or managing external requests.
+It act as a front gate gaurd id anyone came from out it redirect to internal system and the person may required to show id as per configuration.
+
+This is not for inter server communication.
+Also use for routing policy. from where to whre you have to go.
+
+

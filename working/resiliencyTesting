@@ -1,0 +1,9 @@
+Resiliency Testing
+
+
+This is if one service goees down and then how your application respond.
+how you handle failure 
+
+you have to test this is qa/qa2 env.
+
+ChaosMonkey use to do that.
