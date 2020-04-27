@@ -26,8 +26,7 @@ So here the point is how to create a Object:
 
 All above mention styles you are creating object in code due to which you always depend on that object.  
 you never provide type of objects for diffrent environment like for test, qa, qa2 etc.  
-So how we remove dependency of Employee from class A. Sol: if we pass that dependency in constructor or in setter then from you set  
-this value so noe you can pass any thing from outside and this is DI.  
+So how we remove dependency of Employee from class A. Sol: if we pass that dependency in constructor or in setter then from you set this value so now you can pass any thing from outside and this is DI.  
 
 @@@java   
 
