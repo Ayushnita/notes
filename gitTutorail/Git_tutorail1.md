@@ -20,8 +20,9 @@ All the above mention terms, we discussed in detail once we came on that point.
 The first basic command is _git clone_ this command is used to clone any of your repositories from your hosted location to your local system where you do development.
 
 
-@@@Git
-	git clone http://github.com/<username>/<reponame>.git [directory]
+@@@Git  
+
+	git clone http://github.com/<username>/<reponame>.git [directory]  
 
 
 Directory is optional if you did not provide any then, it creates a new directory with repository name and copy code in that.
@@ -32,8 +33,9 @@ Directory is optional if you did not provide any then, it creates a new director
 
 Once we clone repo we start developing code and we make some changes and after that, we have to tell git that those file changes will be considered by when I commit. You can omit some changes by not mention them in add command.
 
-@@@Git
-	git add <file name >/<foldername>
+@@@Git  
+
+	git add \<file name >/\<foldername>  
 
 EG: if you provide __.__ means inside current folder all change.  
 
@@ -45,7 +47,8 @@ EG: if you provide __.__ means inside current folder all change.
 Now you are sure those changes are fine and we are looking ahead to make it persist then we use git commit command to make a snapshot and add it in the mainstream. Git commit command must contain a commit message in which you explain whatever change you do in this commit. This will be very helpful while debugging differences so that you can grasp all changes linked to an individual issue.  
 
 
-@@@Git 
+@@@Git   
+
 	git commit -m "IssueID: changes reated to user reso not saving projects in propoer syntax"  
 
 As you can see in the message first, I give issue ID and then we mention proper change which I make in that commit.  
@@ -57,7 +60,9 @@ As you can see in the message first, I give issue ID and then we mention proper 
 
 Your changes are still in your local Repository, Now you require to push them on the hosted repository, so it will we available for others to examine or review by others. Still, you do not merge with the mainstream.  
 
-@@@Git
+@@@Git  
+
+
 	git push origin <branch>
 	or
 	git push
@@ -71,7 +76,8 @@ I prefer the first one very much because it makes clear that from where to where
 
 You are not the only person who is working on that code, Someone else is also working and that person makes some changes in the hosted repository, now how those differences came to your local repository? By pulling them, They did not come automatically due to merge issues that may occur.
 
-@@@Git 
+@@@Git  
+
 	git pull  
 	
 This will bring all changes to your local repository if there is no conflict ( we discuss the latter ).  
