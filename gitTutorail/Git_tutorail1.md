@@ -1,4 +1,4 @@
-# __GIT Tutorail 1 __
+# __GIT Tutorail 1__  
 
 We are going to begin a Git tutorial series where we can initiate learning about how you can use git to improve your productivity. While, in this notes section, we only focus on commands and some special features so that while practicing we will not miss anything.  
 
@@ -13,9 +13,9 @@ In this tutorial, We learn only five basic git commands, which we will cover 70%
 
 All the above mention terms, we discussed in detail once we came on that point.
 
-## __Git Commands__
+## Git Commands  
 
-### __1. git clone__  
+### __1. git clone__   
 
 The first basic command is _git clone_ this command is used to clone any of your repositories from your hosted location to your local system where you do development.
 
@@ -28,7 +28,7 @@ Directory is optional if you did not provide any then, it creates a new director
 
 #TODO: Demo for clone
 
-### __2. git add __
+### 2. git add  
 
 Once we clone repo we start developing code and we make some changes and after that, we have to tell git that those file changes will be considered by when I commit. You can omit some changes by not mention them in add command.
 
@@ -40,7 +40,7 @@ EG: if you provide __.__ means inside current folder all change.
 #TODO: Demo for add 
 
 
-### __3. git commit __
+### 3. git commit  
 
 Now you are sure those changes are fine and we are looking ahead to make it persist then we use git commit command to make a snapshot and add it in the mainstream. Git commit command must contain a commit message in which you explain whatever change you do in this commit. This will be very helpful while debugging differences so that you can grasp all changes linked to an individual issue.  
 
@@ -53,7 +53,7 @@ As you can see in the message first, I give issue ID and then we mention proper 
 
 #TODO: Demo for commit  
 
-### __4. git push __
+### 4. git push
 
 Your changes are still in your local Repository, Now you require to push them on the hosted repository, so it will we available for others to examine or review by others. Still, you do not merge with the mainstream.  
 
@@ -67,7 +67,7 @@ I prefer the first one very much because it makes clear that from where to where
 
 #TODO: Demo for git push  
 
-### __5. git pull__
+### 5. git pull
 
 You are not the only person who is working on that code, Someone else is also working and that person makes some changes in the hosted repository, now how those differences came to your local repository? By pulling them, They did not come automatically due to merge issues that may occur.
 
