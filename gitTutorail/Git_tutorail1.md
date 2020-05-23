@@ -1,85 +1,87 @@
-# __GIT Tutorail 1 __
+# __GIT Tutorail 1__  
 
-We are going to start a git tutorail series where we can set learn how you can use git to increase your productivity. In this notes section we only pointout commands and some special points so
-that while taching we will not miss anything.
+We are going to begin a Git tutorial series where we can initiate learning about how you can use git to improve your productivity. While, in this notes section, we only focus on commands and some special features so that while practicing we will not miss anything.  
 
-If you are refreing this document then you will able to understand which command is usefull for you work and how you can increase you your productivity.  
+If you are referring to this document then you will able to learn which command is suitable for your work and how you can improve your productivity.  
 
-In this tutorial we learn only five basic git command which we will cover 70% of git, yes only 5 commands. Other commands are usefull for solving complex situations but first understand git
-termologies.  
+In this tutorial, We learn only five basic git commands, which we will cover 70% of git. yes, only 5 commands. Additional commands are useful for solving complex situations, but first understand git vocabulary.  
 
-* _repositatory_ --> your whole project is known as a repositatory. which is hosted on any git supported server like github, atlassian, gitlab etc.  
-* _branch_ --> In git branches are tree branches they start from a one point and then start moving in seprate direction then main streem and at point we want to merge in main streem then you
-  can .  
-* _HEAD_ --> This is a location where you are currently working, it is like a pointer which moves with you changes.  
-* _origin_ --> this is a thread(url) which join your hosted repo to your local repo.  
+* _Repository_ --> your whole project is known as a Repository. Which is hosted on any git supported server like GitHub, Atlassian, GitLab, etc. 
+* _Branch_ --> In git branches are like tree branches, they start from one point and then progress moving in separate 	 direction than the mainstream and if, at one point, we need to merge into the mainstream later you can.  
+* _HEAD_ --> This is a position where you are currently working, this is like a pointer which moves with your changes.  
+* _Origin_ --> this is a thread(URL) which join your hosted repository to your local repository.
 
-All the avobe mention terms we disscussed in detail once we came on that point.  
+All the above mention terms, we discussed in detail once we came on that point.
 
+## Git Commands  
 
-## __Git Commands__
+### __1. git clone__   
 
-### __1. git clone__  
-
-First basic command is _git clone_ this command is use to clone any of your repo form your hosted location to your local system where you do devlopment.  
-
-@@@Git
-	git clone http://github.com/<username>/<reponame>.git [directory]
+The first basic command is _git clone_ this command is used to clone any of your repositories from your hosted location to your local system where you do development.
 
 
-Directory is optional if you did not porovicde any then it create a new directory with repo name and copy code in that.
+@@@Git  
+
+	git clone http://github.com/<username>/<reponame>.git [directory]  
+
+
+Directory is optional if you did not provide any then, it creates a new directory with repository name and copy code in that.
 
 #TODO: Demo for clone
 
-### __2. git add __
+### 2. git add  
 
-Once we clone repo we start changing code and we do some changes and after that we have to tell git that these file changes we want to tell git that these changes now will take care by you and
-wehn I commit considder these changes only. you can ommit some changes by not mention them in add command.
+Once we clone repo we start developing code and we make some changes and after that, we have to tell git that those file changes will be considered by when I commit. You can omit some changes by not mention them in add command.
 
-@@@Git
-	git add <file name >/<foldername>
+@@@Git  
+
+	git add \<file name >/\<foldername>  
 
 EG: if you provide __.__ means inside current folder all change.  
 
 #TODO: Demo for add 
 
 
-### __3. git commit __
+### 3. git commit  
 
-Now you are sure these changes are fine and we are looking forward to make it persisit then we use git commit command to make a snapshot and add it in main streem. git commit command must
-contain a commit message in which you describe what change you make in this commit. This will be very helpful while debugging changes so that you know all changes related to one issue is inside
-one commit and then you work only on that commit.
+Now you are sure those changes are fine and we are looking ahead to make it persist then we use git commit command to make a snapshot and add it in the mainstream. Git commit command must contain a commit message in which you explain whatever change you do in this commit. This will be very helpful while debugging differences so that you can grasp all changes linked to an individual issue.  
 
-@@@Git 
+
+@@@Git   
+
 	git commit -m "IssueID: changes reated to user reso not saving projects in propoer syntax"  
 
-As you can see in message first I give issueID and then we mention proper change which I make in this commit.  
+As you can see in the message first, I give issue ID and then we mention proper change which I make in that commit.  
+
 
 #TODO: Demo for commit  
 
-### __4. git push __
+### 4. git push
 
-your changes are still in you local now you want to push them on hosted repo so it will we avialble for others to examin or review by others still you not merge with main streem dissus later.
+Your changes are still in your local Repository, Now you require to push them on the hosted repository, so it will we available for others to examine or review by others. Still, you do not merge with the mainstream.  
 
-@@@Git
+@@@Git  
+
+
 	git push origin <branch>
 	or
 	git push
 
-I prefer first one very mush clear from where to where, from this command you push your chnges on hosted repo.
+I prefer the first one very much because it makes clear that from where to where this command, pushing your changes on the hosted repository.
+
 
 #TODO: Demo for git push  
 
-### __5. git pull__
+### 5. git pull
 
-you are not only person who are working on that code someone else also working and that person make some chnages in hosted repo now how these changes came to you local repo. By pulling them
-they did not came automaticaly due to merge issue.
+You are not the only person who is working on that code, Someone else is also working and that person makes some changes in the hosted repository, now how those differences came to your local repository? By pulling them, They did not come automatically due to merge issues that may occur.
 
-@@@Git 
+@@@Git  
+
 	git pull  
 	
-This will take all changes to your local if there is no conflict ( we discuss latter ) .
+This will bring all changes to your local repository if there is no conflict ( we discuss the latter ).  
 
-TODO Demo for pull
+#TODO: Demo for pull
 
-Thanks for reading this long in next tutorail we learn some usefull sinarios.
+Thanks for reading this long, In the next tutorial we learn some useful scenarios.
